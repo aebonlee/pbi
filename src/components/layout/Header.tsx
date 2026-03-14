@@ -33,8 +33,8 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-white/95 backdrop-blur-xl border-b border-gray-200/60 shadow-sm"
-          : "bg-white/80 backdrop-blur-md"
+          ? "bg-white/95 backdrop-blur-xl border-b border-gray-200/60 shadow-[var(--shadow-md)]"
+          : "bg-[rgba(255,255,255,0.85)] backdrop-blur-[12px]"
       )}
     >
       <div className="container-custom">
@@ -58,7 +58,7 @@ export function Header() {
                 key={item.key}
                 href={item.href}
                 className={cn(
-                  "px-4 py-2 text-base font-bold rounded-lg transition-colors",
+                  "nav-link-underline px-4 py-2 text-base font-bold rounded-lg transition-colors",
                   pathname === item.href || pathname.startsWith(item.href + "/")
                     ? "text-primary"
                     : "text-gray-700 hover:text-primary"

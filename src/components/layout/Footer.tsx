@@ -9,7 +9,7 @@ export function Footer() {
   const t = useTranslations();
 
   return (
-    <footer className="bg-[#0a1a2e] text-gray-300">
+    <footer className="text-gray-300" style={{ background: "linear-gradient(180deg, #111827 0%, #0A0F1A 100%)" }}>
       <div className="container-custom py-14 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Center Info */}
@@ -108,7 +108,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="mt-14 pt-8 border-t border-[rgba(255,255,255,0.08)] flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-gray-500">
             {t("common.copyright")}
           </p>

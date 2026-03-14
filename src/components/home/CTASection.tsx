@@ -13,20 +13,22 @@ export function CTASection() {
     <section className="py-24 lg:py-32">
       <div className="container-custom">
         <ScrollReveal>
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/10 via-white to-edu-teens/10 border border-primary/20 p-12 lg:p-20 text-center">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-edu-kids/20 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-edu-teens/15 rounded-full blur-3xl" />
-            <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-edu-corporate/10 rounded-full blur-3xl" />
+          <div className="relative overflow-hidden rounded-3xl p-12 lg:p-20 text-center" style={{ background: "linear-gradient(135deg, #0046C8 0%, #002E8A 50%, #1E3A5F 100%)" }}>
+            {/* Background particles */}
+            <div className="absolute top-[20%] left-[15%] w-1.5 h-1.5 bg-white/15 rounded-full animate-pulse" />
+            <div className="absolute bottom-[30%] right-[20%] w-2 h-2 bg-white/10 rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
+            <div className="absolute top-[50%] left-[60%] w-1 h-1 bg-white/20 rounded-full animate-pulse" style={{ animationDelay: "2s" }} />
 
             <div className="relative z-10 max-w-2xl mx-auto">
-              <h2 className="inline-block text-3xl lg:text-4xl font-bold text-white bg-primary px-6 py-2 rounded-lg mb-4">
-                {t("title")}
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+                <span className="text-white">{t("title").split(" ").slice(0, -1).join(" ")} </span>
+                <span className="bg-gradient-to-r from-sky-300 via-blue-200 to-white bg-clip-text text-transparent">{t("title").split(" ").slice(-1).join(" ")}</span>
               </h2>
-              <p className="text-lg text-text-secondary mb-8">
+              <p className="text-lg text-white/80 mb-8">
                 {t("description")}
               </p>
               <Link href="/contact">
-                <Button size="lg" className="gap-2">
+                <Button size="lg" className="gap-2 bg-white text-primary hover:bg-gray-100 border-white shadow-lg shadow-black/15">
                   {t("button")}
                   <ArrowRight className="w-4 h-4" />
                 </Button>

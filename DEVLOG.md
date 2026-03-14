@@ -1,5 +1,101 @@
 # PBI Robot Education Center - 개발일지
 
+## 2026-03-15 | 디자인 개선 — 글래스모피즘 & 다크 그래디언트 (DreamIT Biz 템플릿 참고)
+
+### 개요
+D:\templete-ref (DreamIT Biz 템플릿)의 디자인 패턴을 참고하여 PBI 교육 사이트의 비주얼 품질을 개선하였습니다. 회사명, 콘텐츠, 기능은 변경 없이 **디자인/스타일만** 적용.
+
+---
+
+### 변경 사항
+
+#### 1. `src/app/globals.css` — 디자인 토큰 체계화
+- 그림자 4단계 CSS 변수 추가: `--shadow-sm`, `--shadow-md`, `--shadow-lg`, `--shadow-xl`
+- 폰트: `Noto Sans KR` fallback 추가 (Pretendard 유지)
+- 헤딩 letter-spacing: `-0.02em` 적용
+- 네비 링크 밑줄 애니메이션 (`nav-link-underline`, scaleX transition)
+- 스크롤 인디케이터 CSS (`.scroll-indicator-mouse`, `.scroll-indicator-wheel`)
+
+#### 2. `src/components/layout/Header.tsx` — 글래스모피즘 네비바
+- 기본 배경: `rgba(255,255,255,0.85)` + `backdrop-filter: blur(12px)`
+- 스크롤 시: `bg-white/95` + `shadow-[var(--shadow-md)]` + `border-bottom`
+- 데스크탑 네비 링크: `nav-link-underline` 클래스 적용 (hover 밑줄 scaleX 애니메이션)
+
+#### 3. `src/components/home/HeroSection.tsx` — 다크 그래디언트 히어로
+- 배경: 다크 블루 그래디언트 (`#0046C8 → #002E8A → #1E3A5F`)
+- `min-height: min(85vh, 800px)`
+- 텍스트: 흰색 기본 + 하이라이트 그래디언트 (sky-300 → blue-200 → white)
+- 배지: `bg-white/10 border-white/20` 스타일로 변경
+- CTA 버튼: 흰색 배경 + 아웃라인 흰색 (다크 배경 위 가시성)
+- Feature 카드: `bg-white/10 backdrop-blur border-white/15`
+- 스크롤 인디케이터 (마우스 아이콘 + 휠 애니메이션) 추가
+- 배경 파티클 효과 추가 (6개 점, animate-pulse)
+
+#### 4. `src/components/ui/Button.tsx` — hover 리프트 효과
+- 공통: `hover:-translate-y-0.5` (2px 상승)
+- primary: `hover:shadow-[0_8px_24px_rgba(0,70,200,0.3)]` (블루 글로우)
+- secondary: `hover:shadow-[var(--shadow-md)]`
+- outline: `hover:shadow-[0_8px_24px_rgba(0,70,200,0.15)]`
+
+#### 5. `src/components/ui/Card.tsx` — hover 리프트 강화
+- 기본 shadow: `shadow-[var(--shadow-sm)]`
+- hover shadow: `shadow-[var(--shadow-lg)]` (기존 shadow-md → shadow-lg 강화)
+
+#### 6. `src/components/layout/Footer.tsx` — 다크 그래디언트 강화
+- 배경: `linear-gradient(180deg, #111827 0%, #0A0F1A 100%)` (기존 단색 → 그래디언트)
+- 하단 구분선: `border-[rgba(255,255,255,0.08)]`
+
+#### 7. `src/components/home/CTASection.tsx` — 다크 그래디언트 CTA
+- 배경: `linear-gradient(135deg, #0046C8 → #002E8A → #1E3A5F)` (히어로와 통일)
+- 텍스트: 흰색 + 하이라이트 그래디언트
+- CTA 버튼: 흰색 배경 스타일
+- 배경 파티클 3개 추가
+
+---
+
+### 수정 파일 (7개)
+
+| 파일 | 변경 내용 |
+|------|----------|
+| `src/app/globals.css` | 그림자 토큰 4단계, Noto Sans KR, 밑줄 애니메이션, 스크롤 인디케이터 |
+| `src/components/layout/Header.tsx` | 글래스모피즘 배경, 스크롤 shadow, 링크 밑줄 애니메이션 |
+| `src/components/home/HeroSection.tsx` | 다크 그래디언트 배경, 하이라이트 텍스트, 스크롤 인디케이터 |
+| `src/components/ui/Button.tsx` | hover translateY(-2px) + 블루 글로우 shadow |
+| `src/components/ui/Card.tsx` | shadow-sm → shadow-lg hover 강화 |
+| `src/components/layout/Footer.tsx` | 그래디언트 배경 (#111827 → #0A0F1A) |
+| `src/components/home/CTASection.tsx` | 다크 그래디언트 + 히어로 스타일 통일 |
+
+---
+
+### 참고 디자인 패턴 (D:\templete-ref)
+
+| 패턴 | 값 |
+|------|-----|
+| 그림자 sm | `0 1px 3px rgba(0,0,0,0.06)` |
+| 그림자 md | `0 4px 6px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04)` |
+| 그림자 lg | `0 10px 25px rgba(0,0,0,0.08), 0 4px 10px rgba(0,0,0,0.04)` |
+| 그림자 xl | `0 20px 40px rgba(0,0,0,0.1), 0 8px 16px rgba(0,0,0,0.06)` |
+| 글래스모피즘 | `rgba(255,255,255,0.85)` + `blur(12px)` |
+| 히어로 배경 | `linear-gradient(135deg, #0046C8, #002E8A, #1E3A5F)` |
+| 버튼 hover | `translateY(-2px)` + `box-shadow: 0 8px 24px rgba(0,70,200,0.3)` |
+| transition | `cubic-bezier(0.4, 0, 0.2, 1)` |
+| 푸터 배경 | `linear-gradient(180deg, #111827, #0A0F1A)` |
+
+---
+
+### 빌드 결과
+
+```
+▲ Next.js 16.1.6 (Turbopack)
+✓ Compiled successfully in 4.1s
+✓ Generating static pages (58/58) in 1393.5ms
+```
+
+- TypeScript 에러: 0개
+- 정적 페이지: 58개
+
+---
+
 ## 2026-03-15 | 타이틀 배경색 블루 컬러 적용
 
 ### 개요
