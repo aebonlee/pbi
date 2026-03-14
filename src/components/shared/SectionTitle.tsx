@@ -21,11 +21,12 @@ export function SectionTitle({
         className
       )}
     >
-      <h2 className="text-3xl lg:text-4xl font-bold text-text-primary mb-4">
+      <h2 className="text-3xl lg:text-4xl font-bold gradient-text mb-2">
         {title}
+        <span className={cn("section-title-bar", align === "center" && "section-title-bar-center")} />
       </h2>
       {subtitle && (
-        <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+        <p className="text-text-secondary text-lg max-w-2xl mx-auto mt-4">
           {subtitle}
         </p>
       )}

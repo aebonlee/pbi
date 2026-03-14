@@ -1,5 +1,89 @@
 # PBI Robot Education Center - 개발일지
 
+## 2026-03-15 | 히어로 & 타이틀 컬러 강화
+
+### 개요
+히어로 섹션과 각 섹션 타이틀이 단색(text-text-primary)으로만 구성되어 밋밋했던 문제를 해결하기 위해 그래디언트 텍스트, 교육 테마 색상, 장식 요소를 전면 적용하였습니다.
+
+---
+
+### 변경 사항
+
+#### `src/app/globals.css` — 그래디언트 CSS 클래스 추가
+| 클래스 | 색상 | 용도 |
+|--------|------|------|
+| `.gradient-text` | primary → accent | 섹션 타이틀 (기존, 미사용→활용) |
+| `.gradient-text-warm` | edu-kids(오렌지) → edu-teens(보라) | 따뜻한 톤 강조용 |
+| `.gradient-text-cool` | edu-adults(청록) → edu-corporate(초록) | 차가운 톤 강조용 |
+| `.gradient-text-hero` | primary → edu-teens → edu-kids | 히어로 타이틀 전용 3색 그래디언트 |
+| `.section-title-bar` | primary → accent 가로 바 | 섹션 타이틀 하단 장식 바 |
+
+#### `src/components/home/HeroSection.tsx` — 히어로 컬러 강화
+- h1: `text-text-primary` → `gradient-text-hero` (3색 그래디언트)
+- 배경 블롭 투명도: 10% → 15~20%로 증가
+- edu-corporate 색상 블롭 1개 추가 (총 4개)
+
+#### `src/components/shared/SectionTitle.tsx` — 섹션 타이틀 컬러 강화
+- h2: `text-text-primary` → `gradient-text` (primary → accent 그래디언트)
+- 타이틀 하단에 `section-title-bar` 그래디언트 컬러바 장식 추가
+- 중앙 정렬 시 바도 중앙 정렬 (`section-title-bar-center`)
+
+#### `src/components/home/CTASection.tsx` — CTA 섹션 컬러 강화
+- h2: `text-text-primary` → `gradient-text-hero` (3색 그래디언트)
+- 배경: `from-primary/5` → `from-primary/10`, `to-accent/5` → `to-edu-teens/10`
+- 보더: `border-border` → `border-primary/20`
+- 배경 블롭 투명도 증가 + edu-corporate 블롭 추가
+
+#### `src/components/home/WhyUsSection.tsx` — 아이콘 색상 개별화
+- 4개 카드 아이콘: 단일 `text-primary` → 각각 다른 교육 테마 색상
+  - 전문 강사진: edu-kids (오렌지)
+  - 실습 중심: edu-teens (보라)
+  - 전 연령 대상: edu-adults (청록)
+  - 만족도: edu-corporate (초록)
+
+#### `src/components/home/TestimonialSection.tsx` — 인용 아이콘 색상 변경
+- Quote 아이콘: `text-primary/20` → `text-edu-teens/30` (보라 톤)
+
+---
+
+### 수정 파일 (6개)
+
+| 파일 | 변경 내용 |
+|------|----------|
+| `src/app/globals.css` | 그래디언트 텍스트 4종 + 섹션 타이틀 바 CSS 추가 (+35줄) |
+| `src/components/home/HeroSection.tsx` | 히어로 h1 그래디언트 + 배경 블롭 강화 |
+| `src/components/shared/SectionTitle.tsx` | h2 그래디언트 + 하단 컬러바 장식 |
+| `src/components/home/CTASection.tsx` | CTA h2 그래디언트 + 배경 강화 |
+| `src/components/home/WhyUsSection.tsx` | 아이콘 4색 교육 테마 개별 적용 |
+| `src/components/home/TestimonialSection.tsx` | Quote 아이콘 보라 톤 변경 |
+
+---
+
+### 빌드 결과
+
+```
+▲ Next.js 16.1.6 (Turbopack)
+✓ Compiled successfully in 4.6s
+✓ Generating static pages (58/58) in 1048.9ms
+```
+
+- 컴파일: 4.6초
+- 정적 페이지 생성: 58개 / 1048.9ms
+- TypeScript 에러: 0개
+
+---
+
+### Git 커밋 이력
+
+| 커밋 | 내용 |
+|------|------|
+| `feat: PBI Robot 로봇 수영장 청소기 브랜드 사이트 초기 구축` | 전체 소스코드, 이미지, 설정파일 87개 파일 |
+| `ci: GitHub Actions 배포 워크플로 추가` | GitHub Pages 자동 빌드 & 배포 설정 |
+| `feat: 제품 사이트를 로봇 교육 사이트로 전면 전환` | 교육과정, 온라인학습, 체험프로그램, 강사진 등 |
+| `style: 히어로 및 섹션 타이틀 그래디언트 컬러 적용` | 그래디언트 텍스트, 교육 테마 색상 강화 6개 파일 |
+
+---
+
 ## 2026-03-15 | 로봇 교육 사이트로 전면 전환
 
 ### 개요

@@ -50,7 +50,7 @@ export function TestimonialSection() {
           {testimonials.map((item, index) => (
             <ScrollReveal key={index} delay={index * 0.15}>
               <div className="bg-white rounded-2xl border border-border p-6 lg:p-8 hover:shadow-md transition-shadow h-full flex flex-col">
-                <Quote className="w-8 h-8 text-primary/20 mb-4" />
+                <Quote className="w-8 h-8 text-edu-teens/30 mb-4" />
                 <p className="text-sm text-text-secondary leading-relaxed mb-6 flex-1">
                   &ldquo;{item.text[locale]}&rdquo;
                 </p>

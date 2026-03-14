@@ -79,6 +79,41 @@
     background-clip: text;
   }
 
+  .gradient-text-warm {
+    background: linear-gradient(135deg, var(--color-edu-kids) 0%, var(--color-edu-teens) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text-cool {
+    background: linear-gradient(135deg, var(--color-edu-adults) 0%, var(--color-edu-corporate) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text-hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-edu-teens) 50%, var(--color-edu-kids) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-title-bar {
+    display: block;
+    width: 3rem;
+    height: 4px;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    margin-top: 0.75rem;
+  }
+
+  .section-title-bar-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .gradient-border {
     position: relative;
     border-radius: 0.75rem;

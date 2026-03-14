@@ -11,24 +11,28 @@ const highlights = [
     icon: <GraduationCap className="w-8 h-8" />,
     stat: "10+",
     statLabel: { ko: "전문 강사", en: "Expert Instructors" },
+    color: "text-edu-kids bg-edu-kids/10 group-hover:bg-edu-kids/20",
   },
   {
     key: "handson" as const,
     icon: <Wrench className="w-8 h-8" />,
     stat: "80%",
     statLabel: { ko: "실습 비율", en: "Hands-on Ratio" },
+    color: "text-edu-teens bg-edu-teens/10 group-hover:bg-edu-teens/20",
   },
   {
     key: "allAge" as const,
     icon: <Users className="w-8 h-8" />,
     stat: "5~60",
     statLabel: { ko: "대상 연령", en: "Age Range" },
+    color: "text-edu-adults bg-edu-adults/10 group-hover:bg-edu-adults/20",
   },
   {
     key: "career" as const,
     icon: <Briefcase className="w-8 h-8" />,
     stat: "95%",
     statLabel: { ko: "만족도", en: "Satisfaction" },
+    color: "text-edu-corporate bg-edu-corporate/10 group-hover:bg-edu-corporate/20",
   },
 ];
 
@@ -47,7 +51,7 @@ export function WhyUsSection() {
           {highlights.map((item, index) => (
             <ScrollReveal key={item.key} delay={index * 0.1}>
               <div className="text-center p-8 rounded-2xl bg-section border border-border hover:border-primary/30 transition-all duration-300 group">
-                <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary/20 transition-colors">
+                <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-colors ${item.color}`}>
                   {item.icon}
                 </div>
                 <div className="text-3xl font-bold text-accent mb-1">{item.stat}</div>

@@ -12,9 +12,10 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-primary/5 via-white to-section">
       {/* Background decorations */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-edu-kids/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-edu-teens/10 rounded-full blur-3xl" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute top-20 right-10 w-72 h-72 bg-edu-kids/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-edu-teens/15 rounded-full blur-3xl" />
+      <div className="absolute top-1/3 right-1/4 w-48 h-48 bg-edu-corporate/15 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl" />
 
       {/* Content */}
       <div className="container-custom relative z-10 pt-24 pb-16">
@@ -33,7 +34,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-text-primary leading-tight tracking-tight mb-6"
+            className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6 gradient-text-hero"
           >
             {t("title")}
           </motion.h1>
