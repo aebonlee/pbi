@@ -1,5 +1,66 @@
 # PBI Robot Education Center - 개발일지
 
+## 2026-03-15 | 메뉴별 다크 그래디언트 페이지 헤더 적용
+
+### 개요
+각 메뉴 페이지(교육과정, 온라인학습, 체험프로그램, 강사진, FAQ, 문의, 소개) 상단에 **다크 블루 그래디언트 페이지 헤더**를 적용하였습니다. 히어로/CTA 섹션과 동일한 디자인 패턴으로 사이트 전체 비주얼 통일감을 확보.
+
+---
+
+### 변경 사항
+
+#### `src/components/shared/PageHeader.tsx` — 신규 공통 컴포넌트
+- 배경: `linear-gradient(135deg, #0046C8, #002E8A, #1E3A5F)` (히어로와 동일)
+- 패딩: `pt-28 pb-16 lg:pt-32 lg:pb-20` (네비바 높이 고려)
+- 타이틀: `text-3xl sm:text-4xl lg:text-5xl font-bold text-white`
+- 서브타이틀: `text-lg text-white/75`
+- 배경 파티클 3개 (animate-pulse)
+- Framer Motion fade-up 애니메이션
+
+#### 적용 페이지 (7개)
+
+| 페이지 | 파일 | 변경 내용 |
+|--------|------|----------|
+| 교육과정 | `src/app/[locale]/courses/page.tsx` | `SectionTitle` → `PageHeader` |
+| 온라인학습 | `src/app/[locale]/learning/page.tsx` | `SectionTitle` → `PageHeader` |
+| 체험프로그램 | `src/app/[locale]/programs/page.tsx` | `SectionTitle` → `PageHeader` |
+| 강사진 | `src/app/[locale]/instructors/InstructorsContent.tsx` | `SectionTitle` → `PageHeader` |
+| FAQ | `src/components/faq/FAQContent.tsx` | `SectionTitle` → `PageHeader` |
+| 문의 | `src/components/contact/ContactContent.tsx` | `SectionTitle` → `PageHeader` |
+| 소개 | `src/components/about/VisionSection.tsx` | 커스텀 h1 → `PageHeader` |
+| 소개(레이아웃) | `src/app/[locale]/about/page.tsx` | `pt-20` 제거 (PageHeader 자체 패딩) |
+
+---
+
+### 수정 파일 (9개)
+
+| 파일 | 변경 |
+|------|------|
+| `src/components/shared/PageHeader.tsx` | **신규** — 다크 그래디언트 페이지 헤더 컴포넌트 |
+| `src/app/[locale]/courses/page.tsx` | PageHeader 적용 |
+| `src/app/[locale]/learning/page.tsx` | PageHeader 적용 |
+| `src/app/[locale]/programs/page.tsx` | PageHeader 적용 |
+| `src/app/[locale]/instructors/InstructorsContent.tsx` | PageHeader 적용 |
+| `src/components/faq/FAQContent.tsx` | PageHeader 적용 |
+| `src/components/contact/ContactContent.tsx` | PageHeader 적용 |
+| `src/components/about/VisionSection.tsx` | PageHeader 적용 |
+| `src/app/[locale]/about/page.tsx` | pt-20 제거 |
+
+---
+
+### 빌드 결과
+
+```
+▲ Next.js 16.1.6 (Turbopack)
+✓ Compiled successfully in 4.8s
+✓ Generating static pages (58/58) in 1127.6ms
+```
+
+- TypeScript 에러: 0개
+- 정적 페이지: 58개
+
+---
+
 ## 2026-03-15 | 디자인 개선 — 글래스모피즘 & 다크 그래디언트 (DreamIT Biz 템플릿 참고)
 
 ### 개요

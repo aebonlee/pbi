@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { learningContents } from "@/data/learning";
-import { SectionTitle } from "@/components/shared/SectionTitle";
+import { PageHeader } from "@/components/shared/PageHeader";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { LearningGrid } from "@/components/learning/LearningGrid";
 import { cn } from "@/lib/utils";
@@ -19,12 +19,10 @@ export default function LearningPage() {
     : learningContents.filter((c) => c.category === activeCategory);
 
   return (
-    <div className="pt-24 pb-16">
-      <div className="container-custom">
-        <ScrollReveal>
-          <SectionTitle title={t("title")} subtitle={t("subtitle")} />
-        </ScrollReveal>
+    <div>
+      <PageHeader title={t("title")} subtitle={t("subtitle")} />
 
+      <div className="container-custom py-12 lg:py-16">
         <ScrollReveal>
           <div className="flex flex-wrap justify-center gap-2 mb-12">
             {categories.map((category) => (

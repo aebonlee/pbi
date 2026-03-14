@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { programs } from "@/data/programs";
-import { SectionTitle } from "@/components/shared/SectionTitle";
+import { PageHeader } from "@/components/shared/PageHeader";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { ProgramGrid } from "@/components/programs/ProgramGrid";
 import { cn } from "@/lib/utils";
@@ -19,12 +19,10 @@ export default function ProgramsPage() {
     : programs.filter((p) => p.type === activeType);
 
   return (
-    <div className="pt-24 pb-16">
-      <div className="container-custom">
-        <ScrollReveal>
-          <SectionTitle title={t("title")} subtitle={t("subtitle")} />
-        </ScrollReveal>
+    <div>
+      <PageHeader title={t("title")} subtitle={t("subtitle")} />
 
+      <div className="container-custom py-12 lg:py-16">
         <ScrollReveal>
           <div className="flex flex-wrap justify-center gap-2 mb-12">
             {types.map((type) => (

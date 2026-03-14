@@ -28,7 +28,7 @@ export default async function AboutPage({
   setRequestLocale(locale);
 
   return (
-    <div className="pt-20">
+    <div>
       <VisionSection />
       <ValuesSection />
       <CertificationBadges />

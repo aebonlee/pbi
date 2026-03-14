@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { courses } from "@/data/courses";
-import { SectionTitle } from "@/components/shared/SectionTitle";
+import { PageHeader } from "@/components/shared/PageHeader";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { CourseFilter } from "@/components/courses/CourseFilter";
 import { CourseGrid } from "@/components/courses/CourseGrid";
@@ -20,12 +20,10 @@ export default function CoursesPage() {
   });
 
   return (
-    <div className="pt-24 pb-16">
-      <div className="container-custom">
-        <ScrollReveal>
-          <SectionTitle title={t("title")} subtitle={t("subtitle")} />
-        </ScrollReveal>
+    <div>
+      <PageHeader title={t("title")} subtitle={t("subtitle")} />
 
+      <div className="container-custom py-12 lg:py-16">
         <ScrollReveal>
           <CourseFilter
             activeAgeGroup={ageGroup}

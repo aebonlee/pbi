@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { SectionTitle } from "@/components/shared/SectionTitle";
+import { PageHeader } from "@/components/shared/PageHeader";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Accordion } from "@/components/ui/Accordion";
 import { eduFaqData } from "@/data/edu-faq";
@@ -24,12 +24,10 @@ export function FAQContent() {
   }));
 
   return (
-    <section className="py-24 lg:py-32">
-      <div className="container-custom">
-        <ScrollReveal>
-          <SectionTitle title={t("title")} subtitle={t("subtitle")} />
-        </ScrollReveal>
+    <div>
+      <PageHeader title={t("title")} subtitle={t("subtitle")} />
 
+      <div className="container-custom py-12 lg:py-16">
         <ScrollReveal>
           <div className="flex flex-wrap justify-center gap-2 mb-12">
             {categories.map((category) => (
@@ -55,6 +53,6 @@ export function FAQContent() {
           </div>
         </ScrollReveal>
       </div>
-    </section>
+    </div>
   );
 }
