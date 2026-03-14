@@ -1,5 +1,67 @@
 # PBI Robot Education Center - 개발일지
 
+## 2026-03-15 | Open Graph (OG) 메타 태그 및 미리보기 이미지 추가
+
+### 개요
+카카오톡, 페이스북, 트위터 등 소셜 미디어에서 URL 공유 시 미리보기(제목, 설명, 이미지)가 정상 표시되도록 Open Graph 메타 태그와 OG 이미지를 추가하였습니다.
+
+---
+
+### 변경 사항
+
+#### OG 이미지 생성 — `public/images/og/default.png`
+- 1200×630px PNG 이미지 (소셜 미디어 권장 규격)
+- 3색 그래디언트 배경 (primary → edu-teens → edu-kids)
+- 로봇 아이콘 + "PBI 로봇 교육센터" 타이틀 + 부제 + 태그라인
+- sharp 라이브러리로 SVG → PNG 변환 생성
+
+#### `src/app/[locale]/layout.tsx` — OG 메타 태그 완성
+- `og:url`: `https://pbi.dreamitbiz.com`
+- `og:title`: 한/영 사이트 제목
+- `og:description`: 한/영 사이트 설명
+- `og:type`: `website`
+- `og:image`: `/images/og/default.png` (1200×630)
+- `og:site_name`: PBI 로봇 교육센터
+- `og:locale`: `ko_KR` / `en_US`
+- `twitter:card`: `summary_large_image` 추가
+
+#### `src/app/layout.tsx` — 루트 메타데이터 업데이트
+- 이전 제품 사이트 제목/설명 → 교육 사이트로 변경
+
+---
+
+### 수정 파일 (3개)
+
+| 파일 | 변경 내용 |
+|------|----------|
+| `public/images/og/default.png` | OG 미리보기 이미지 신규 생성 (1200×630) |
+| `src/app/[locale]/layout.tsx` | OG/Twitter 메타 태그 완성 |
+| `src/app/layout.tsx` | 루트 메타데이터 교육 사이트로 변경 |
+
+---
+
+### 빌드 결과
+
+```
+▲ Next.js 16.1.6 (Turbopack)
+✓ Compiled successfully in 4.5s
+✓ Generating static pages (58/58) in 1130.2ms
+```
+
+---
+
+### Git 커밋 이력
+
+| 커밋 | 내용 |
+|------|------|
+| `feat: PBI Robot 로봇 수영장 청소기 브랜드 사이트 초기 구축` | 전체 소스코드, 이미지, 설정파일 87개 파일 |
+| `ci: GitHub Actions 배포 워크플로 추가` | GitHub Pages 자동 빌드 & 배포 설정 |
+| `feat: 제품 사이트를 로봇 교육 사이트로 전면 전환` | 교육과정, 온라인학습, 체험프로그램, 강사진 등 |
+| `style: 히어로 및 섹션 타이틀 그래디언트 컬러 적용` | 그래디언트 텍스트, 교육 테마 색상 강화 6개 파일 |
+| `feat: Open Graph 메타 태그 및 OG 이미지 추가` | 소셜 공유 미리보기 지원 |
+
+---
+
 ## 2026-03-15 | 히어로 & 타이틀 컬러 강화
 
 ### 개요
