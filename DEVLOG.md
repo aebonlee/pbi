@@ -1,5 +1,35 @@
 # PBI Robot Education Center - 개발일지
 
+## 2026-03-15 | 타이틀 배경색 블루 컬러 적용
+
+### 개요
+히어로, 섹션 타이틀, CTA 타이틀의 그래디언트 텍스트를 **메인 블루(primary #0056b3) 배경 + 흰색 텍스트** 스타일로 변경하였습니다.
+
+---
+
+### 변경 사항
+
+#### `src/components/shared/SectionTitle.tsx`
+- h2: `gradient-text` → `text-white bg-primary px-6 py-2 rounded-lg`
+- `section-title-bar` 장식 제거 → 블루 배경 자체가 시각 강조 역할
+
+#### `src/components/home/HeroSection.tsx`
+- h1: `gradient-text-hero` → `text-white bg-primary px-6 py-3 rounded-xl`
+
+#### `src/components/home/CTASection.tsx`
+- h2: `gradient-text-hero` → `text-white bg-primary px-6 py-2 rounded-lg`
+
+---
+
+### 빌드 결과
+
+```
+✓ Compiled successfully in 4.0s
+✓ Generating static pages (58/58) in 1104.2ms
+```
+
+---
+
 ## 2026-03-15 | Open Graph (OG) 메타 태그 및 미리보기 이미지 추가
 
 ### 개요
