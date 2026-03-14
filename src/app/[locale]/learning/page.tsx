@@ -1,30 +1,25 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
+import { learningContents } from "@/data/learning";
 import { SectionTitle } from "@/components/shared/SectionTitle";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
-import { Accordion } from "@/components/ui/Accordion";
-import { eduFaqData } from "@/data/edu-faq";
+import { LearningGrid } from "@/components/learning/LearningGrid";
 import { cn } from "@/lib/utils";
 
-const categories = ["general", "courses", "programs", "payment"] as const;
+const categories = ["all", "video", "document", "interactive"] as const;
 
-export function FAQContent() {
-  const t = useTranslations("faq");
-  const locale = useLocale() as "ko" | "en";
-  const [activeCategory, setActiveCategory] = useState<string>("general");
+export default function LearningPage() {
+  const t = useTranslations("learning");
+  const [activeCategory, setActiveCategory] = useState<string>("all");
 
-  const filteredFaqs = eduFaqData.filter((faq) => faq.category === activeCategory);
-
-  const accordionItems = filteredFaqs.map((faq) => ({
-    id: faq.id,
-    title: faq.question[locale],
-    content: faq.answer[locale],
-  }));
+  const filtered = activeCategory === "all"
+    ? learningContents
+    : learningContents.filter((c) => c.category === activeCategory);
 
   return (
-    <section className="py-24 lg:py-32">
+    <div className="pt-24 pb-16">
       <div className="container-custom">
         <ScrollReveal>
           <SectionTitle title={t("title")} subtitle={t("subtitle")} />
@@ -49,12 +44,8 @@ export function FAQContent() {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal>
-          <div className="max-w-3xl mx-auto">
-            <Accordion items={accordionItems} />
-          </div>
-        </ScrollReveal>
+        <LearningGrid contents={filtered} />
       </div>
-    </section>
+    </div>
   );
 }

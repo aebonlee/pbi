@@ -12,8 +12,8 @@ export async function generateMetadata({
   return {
     title: isKo ? "자주 묻는 질문" : "FAQ",
     description: isKo
-      ? "AquaSense 로봇 수영장 청소기에 대해 자주 묻는 질문과 답변을 확인하세요."
-      : "Find answers to frequently asked questions about AquaSense robotic pool cleaners.",
+      ? "PBI 로봇 교육센터의 교육 과정, 체험 프로그램, 결제에 대한 자주 묻는 질문과 답변입니다."
+      : "Frequently asked questions about PBI Robot Education Center courses, programs, and payments.",
   };
 }
 

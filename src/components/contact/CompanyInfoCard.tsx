@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { COMPANY_INFO } from "@/lib/constants";
+import { EDUCATION_CENTER_INFO } from "@/lib/constants";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export function CompanyInfoCard() {
@@ -11,19 +11,19 @@ export function CompanyInfoCard() {
     {
       icon: <MapPin className="w-5 h-5" />,
       label: t("address"),
-      value: COMPANY_INFO.address.ko,
+      value: EDUCATION_CENTER_INFO.address.ko,
     },
     {
       icon: <Phone className="w-5 h-5" />,
       label: t("phone"),
-      value: COMPANY_INFO.phone,
-      href: `tel:${COMPANY_INFO.phone}`,
+      value: EDUCATION_CENTER_INFO.phone,
+      href: `tel:${EDUCATION_CENTER_INFO.phone}`,
     },
     {
       icon: <Mail className="w-5 h-5" />,
       label: t("email"),
-      value: COMPANY_INFO.email,
-      href: `mailto:${COMPANY_INFO.email}`,
+      value: EDUCATION_CENTER_INFO.email,
+      href: `mailto:${EDUCATION_CENTER_INFO.email}`,
     },
     {
       icon: <Clock className="w-5 h-5" />,
@@ -58,7 +58,6 @@ export function CompanyInfoCard() {
         </div>
       </div>
 
-      {/* Map placeholder */}
       <div className="bg-section rounded-2xl border border-border overflow-hidden">
         <div className="aspect-[4/3] flex items-center justify-center bg-card">
           <div className="text-center">

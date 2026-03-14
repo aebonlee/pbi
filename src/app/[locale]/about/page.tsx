@@ -12,10 +12,10 @@ export async function generateMetadata({
   const { locale } = await params;
   const isKo = locale === "ko";
   return {
-    title: isKo ? "회사소개" : "About Us",
+    title: isKo ? "소개" : "About",
     description: isKo
-      ? "PBI Robot - AI 로봇 수영장 청소기 전문 기업. 비전, 핵심가치, 인증 정보를 확인하세요."
-      : "PBI Robot - AI robotic pool cleaner specialists. Discover our vision, values, and certifications.",
+      ? "PBI 로봇 교육센터 - 교육 비전, 핵심 가치, 인증 정보를 확인하세요."
+      : "PBI Robot Education Center - Discover our vision, values, and certifications.",
   };
 }
 

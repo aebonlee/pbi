@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
-import { ContactContent } from "@/components/contact/ContactContent";
+import { InstructorsContent } from "./InstructorsContent";
 
 export async function generateMetadata({
   params,
@@ -10,14 +10,14 @@ export async function generateMetadata({
   const { locale } = await params;
   const isKo = locale === "ko";
   return {
-    title: isKo ? "문의" : "Contact",
+    title: isKo ? "강사진" : "Instructors",
     description: isKo
-      ? "PBI 로봇 교육센터에 교육 상담 및 수강 신청 문의를 하세요."
-      : "Contact PBI Robot Education Center for education consultation and enrollment inquiries.",
+      ? "PBI 로봇 교육센터의 전문 강사진을 소개합니다."
+      : "Meet the expert instructors at PBI Robot Education Center.",
   };
 }
 
-export default async function ContactPage({
+export default async function InstructorsPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -25,9 +25,5 @@ export default async function ContactPage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return (
-    <div className="pt-20">
-      <ContactContent />
-    </div>
-  );
+  return <InstructorsContent />;
 }

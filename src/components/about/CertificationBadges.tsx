@@ -3,15 +3,15 @@
 import { useTranslations } from "next-intl";
 import { SectionTitle } from "@/components/shared/SectionTitle";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
-import { Award, Shield, CheckCircle, Star } from "lucide-react";
+import { Award, Shield, CheckCircle, Star, GraduationCap, Building } from "lucide-react";
 
 const certifications = [
-  { name: "CE", icon: <Shield className="w-8 h-8" />, year: "2022" },
-  { name: "FCC", icon: <CheckCircle className="w-8 h-8" />, year: "2022" },
-  { name: "KC", icon: <Award className="w-8 h-8" />, year: "2021" },
-  { name: "Inno-Biz", icon: <Star className="w-8 h-8" />, year: "2023" },
-  { name: "ISO 9001", icon: <Shield className="w-8 h-8" />, year: "2023" },
-  { name: "IP68", icon: <CheckCircle className="w-8 h-8" />, year: "2024" },
+  { name: "교육부 인증", nameEn: "MOE Certified", icon: <Shield className="w-8 h-8" />, year: "2024" },
+  { name: "STEAM 교육", nameEn: "STEAM Edu", icon: <GraduationCap className="w-8 h-8" />, year: "2024" },
+  { name: "로봇학회 인증", nameEn: "Robotics Society", icon: <Award className="w-8 h-8" />, year: "2023" },
+  { name: "ISO 9001", nameEn: "ISO 9001", icon: <CheckCircle className="w-8 h-8" />, year: "2023" },
+  { name: "기술혁신기업", nameEn: "Inno-Biz", icon: <Star className="w-8 h-8" />, year: "2023" },
+  { name: "기업교육 파트너", nameEn: "Corp. Partner", icon: <Building className="w-8 h-8" />, year: "2024" },
 ];
 
 export function CertificationBadges() {

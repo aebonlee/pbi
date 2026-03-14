@@ -9,7 +9,6 @@ export function VisionSection() {
   return (
     <section className="py-24 lg:py-32">
       <div className="container-custom">
-        {/* Hero */}
         <ScrollReveal>
           <div className="text-center mb-20">
             <h1 className="text-4xl lg:text-5xl font-bold text-text-primary mb-4">
@@ -21,7 +20,6 @@ export function VisionSection() {
           </div>
         </ScrollReveal>
 
-        {/* Vision */}
         <ScrollReveal>
           <div className="max-w-4xl mx-auto bg-section rounded-2xl border border-border p-8 lg:p-12">
             <h2 className="text-2xl lg:text-3xl font-bold text-text-primary mb-6">

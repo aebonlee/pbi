@@ -3,12 +3,12 @@
 import { useTranslations } from "next-intl";
 import { SectionTitle } from "@/components/shared/SectionTitle";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
-import { Zap, Globe, Lightbulb } from "lucide-react";
+import { Wrench, Heart, Lightbulb } from "lucide-react";
 
 const values = [
-  { key: "efficiency" as const, icon: <Zap className="w-10 h-10" />, color: "text-yellow-400" },
-  { key: "global" as const, icon: <Globe className="w-10 h-10" />, color: "text-blue-400" },
-  { key: "innovation" as const, icon: <Lightbulb className="w-10 h-10" />, color: "text-green-400" },
+  { key: "practice" as const, icon: <Wrench className="w-10 h-10" />, color: "text-edu-kids" },
+  { key: "inclusion" as const, icon: <Heart className="w-10 h-10" />, color: "text-edu-teens" },
+  { key: "innovation" as const, icon: <Lightbulb className="w-10 h-10" />, color: "text-edu-adults" },
 ];
 
 export function ValuesSection() {

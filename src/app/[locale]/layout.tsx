@@ -22,18 +22,18 @@ export async function generateMetadata({
   return {
     title: {
       default: isKo
-        ? "PBI Robot - AI 로봇 수영장 청소기"
-        : "PBI Robot - AI Robotic Pool Cleaner",
-      template: isKo ? "%s | PBI Robot" : "%s | PBI Robot",
+        ? "PBI 로봇 교육센터 - 로봇 교육의 미래"
+        : "PBI Robot Education Center - The Future of Robot Education",
+      template: isKo ? "%s | PBI 로봇 교육센터" : "%s | PBI Robot Education",
     },
     description: isKo
-      ? "AquaSense 시리즈 - 스마트한 수영장 관리의 시작. AI 기반 로봇 수영장 청소기."
-      : "AquaSense Series - Smart pool management starts here. AI-powered robotic pool cleaners.",
-    metadataBase: new URL("https://pbirobot.dreamitbiz.com"),
+      ? "키즈부터 성인, 기업까지 — 체계적인 커리큘럼과 실습 중심의 로봇 교육. PBI 로봇 교육센터"
+      : "From kids to adults and corporations — systematic curriculum and hands-on robot education. PBI Robot Education Center",
+    metadataBase: new URL("https://pbi.dreamitbiz.com"),
     openGraph: {
       type: "website",
       locale: isKo ? "ko_KR" : "en_US",
-      siteName: "PBI Robot",
+      siteName: isKo ? "PBI 로봇 교육센터" : "PBI Robot Education Center",
     },
   };
 }

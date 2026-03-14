@@ -1,34 +1,28 @@
 import logo from "@/images/logo.webp";
-import hero from "@/images/pbi_8.webp";
-import proBanner from "@/images/pbi_2.webp";
-import proLifestyle from "@/images/pbi_4.webp";
-import proCharging from "@/images/pbi_1.webp";
-import ultraCommercial from "@/images/pbi_9.webp";
-import ultraWall from "@/images/pbi_3.webp";
-import ultraAerial from "@/images/pbi_7.webp";
-import underwaterClose1 from "@/images/pbi_5.webp";
-import underwaterClose2 from "@/images/pbi_6.webp";
 
 export const images = {
   logo,
-  hero,
-  pro: {
-    main: proBanner,
-    lifestyle: proLifestyle,
-    charging: proCharging,
+  hero: {
+    main: "/images/hero-education.svg",
+    kids: "/images/hero-kids.svg",
+    teens: "/images/hero-teens.svg",
+    adults: "/images/hero-adults.svg",
   },
-  ultra: {
-    main: ultraCommercial,
-    wall: ultraWall,
-    aerial: ultraAerial,
+  courses: {
+    kids: "/images/course-kids.svg",
+    teens: "/images/course-teens.svg",
+    adults: "/images/course-adults.svg",
+    corporate: "/images/course-corporate.svg",
   },
-  details: {
-    underwater1: underwaterClose1,
-    underwater2: underwaterClose2,
+  learning: {
+    video: "/images/learning-video.svg",
+    document: "/images/learning-document.svg",
+    interactive: "/images/learning-interactive.svg",
   },
-} as const;
-
-export const productImages = {
-  "aquasense-2-pro": [proBanner, proLifestyle, proCharging],
-  "aquasense-2-ultra": [ultraCommercial, ultraWall, ultraAerial],
+  programs: {
+    camp: "/images/program-camp.svg",
+    workshop: "/images/program-workshop.svg",
+    fieldTrip: "/images/program-field-trip.svg",
+    competition: "/images/program-competition.svg",
+  },
 } as const;
