@@ -33,8 +33,8 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-white/95 backdrop-blur-xl border-b border-gray-200/60 shadow-[var(--shadow-md)]"
-          : "bg-[rgba(255,255,255,0.85)] backdrop-blur-[12px]"
+          ? "bg-white border-b border-gray-200/60 shadow-[var(--shadow-md)]"
+          : "bg-white"
       )}
     >
       <div className="container-custom">
@@ -96,7 +96,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-gray-200/60">
+        <div className="lg:hidden bg-white border-t border-gray-200/60">
           <div className="container-custom py-3 space-y-0.5">
             {NAV_ITEMS.map((item) => (
               <Link

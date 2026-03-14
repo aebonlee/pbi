@@ -1,5 +1,31 @@
 # PBI Robot Education Center - 개발일지
 
+## 2026-03-15 | 상단 메뉴 배경색 흰색으로 변경 (로고 배경과 통일)
+
+### 개요
+상단 네비게이션 바의 배경색을 로고(흰색 배경)와 동일한 **불투명 흰색(`bg-white`)**으로 변경.
+기존 반투명 글래스모피즘(`rgba(255,255,255,0.85)` + `backdrop-blur`)에서 깔끔한 흰색 배경으로 교체.
+
+---
+
+### 변경 사항
+
+#### `src/components/layout/Header.tsx`
+- 기본 상태: `bg-[rgba(255,255,255,0.85)] backdrop-blur-[12px]` → `bg-white`
+- 스크롤 시: `bg-white/95 backdrop-blur-xl` → `bg-white` (shadow-md, border 유지)
+- 모바일 메뉴: `bg-white/95 backdrop-blur-xl` → `bg-white`
+
+---
+
+### 빌드 결과
+
+```
+✓ Compiled successfully in 5.7s
+✓ Generating static pages (58/58) in 2.1s
+```
+
+---
+
 ## 2026-03-15 | 메뉴별 다크 그래디언트 페이지 헤더 적용
 
 ### 개요
