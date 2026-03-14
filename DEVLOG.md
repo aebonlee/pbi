@@ -138,9 +138,28 @@ D:\pbi/
 
 ---
 
+### 배포
+
+- **플랫폼**: GitHub Pages
+- **도메인**: `pbirobot.dreamitbiz.com` (CNAME 설정 완료)
+- **CI/CD**: GitHub Actions 자동 배포
+  - `main` 브랜치 푸시 시 자동 빌드 & 배포
+  - 워크플로 파일: `.github/workflows/deploy.yml`
+- **빌드 방식**: `next build` → `out/` 디렉토리 정적 export → GitHub Pages 업로드
+
+---
+
+### Git 커밋 이력
+
+| 커밋 | 내용 |
+|------|------|
+| `feat: PBI Robot 로봇 수영장 청소기 브랜드 사이트 초기 구축` | 전체 소스코드, 이미지, 설정파일 87개 파일 |
+| `ci: GitHub Actions 배포 워크플로 추가` | GitHub Pages 자동 빌드 & 배포 설정 |
+
+---
+
 ### 향후 계획
 
-- [ ] GitHub Pages 또는 Vercel 배포
 - [ ] 실제 제품 이미지 교체
 - [ ] 블로그 CMS 연동 (Contentful, Sanity 등)
 - [ ] 결제 시스템 연동
