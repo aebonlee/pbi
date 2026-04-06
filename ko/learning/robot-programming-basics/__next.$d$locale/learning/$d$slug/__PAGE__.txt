@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[85224,["/_next/static/chunks/0492be0581c98386.js","/_next/static/chunks/65d9fc7996a6196b.js","/_next/static/chunks/eaf0689684af4460.js","/_next/static/chunks/3b453305048c1ce8.js"],"LearningDetail"]
+3:I[6827,["/_next/static/chunks/b209b023395a8054.js","/_next/static/chunks/cb3d026eb2cf8b84.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"Hld7To7Zme6H-yO0RWoMs","rsc":["$","$1","c",{"children":[["$","$L2",null,{"content":{"id":"learn-3","slug":"robot-programming-basics","title":{"ko":"로봇 프로그래밍 기초","en":"Robot Programming Basics"},"description":{"ko":"브라우저에서 직접 코드를 작성하고 가상 로봇을 움직여볼 수 있는 인터랙티브 학습 콘텐츠입니다. 파이썬 기초 문법과 로봇 제어 명령을 단계별로 학습합니다.","en":"Interactive learning content where you can write code in the browser and move a virtual robot. Learn Python basics and robot control commands step by step."},"category":"interactive","thumbnail":"/images/learning-interactive.svg","duration":"90분","level":"beginner","tags":["파이썬","코딩","인터랙티브"]}}],[["$","script","script-0",{"src":"/_next/static/chunks/eaf0689684af4460.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/3b453305048c1ce8.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+5:null

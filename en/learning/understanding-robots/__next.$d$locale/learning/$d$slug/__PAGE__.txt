@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[85224,["/_next/static/chunks/0492be0581c98386.js","/_next/static/chunks/65d9fc7996a6196b.js","/_next/static/chunks/eaf0689684af4460.js","/_next/static/chunks/3b453305048c1ce8.js"],"LearningDetail"]
+3:I[6827,["/_next/static/chunks/b209b023395a8054.js","/_next/static/chunks/cb3d026eb2cf8b84.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"Hld7To7Zme6H-yO0RWoMs","rsc":["$","$1","c",{"children":[["$","$L2",null,{"content":{"id":"learn-1","slug":"understanding-robots","title":{"ko":"로봇의 이해","en":"Understanding Robots"},"description":{"ko":"로봇의 역사부터 현재까지, 로봇 기술의 발전 과정과 기본 원리를 영상으로 쉽게 배울 수 있는 입문 강좌입니다. 다양한 로봇의 종류와 활용 분야를 소개합니다.","en":"An introductory video course covering the history and evolution of robotics, from basic principles to modern applications. Introduces various types of robots and their use cases."},"category":"video","thumbnail":"/images/learning-video.svg","duration":"45분","level":"beginner","tags":["입문","로봇 역사","로봇 종류"]}}],[["$","script","script-0",{"src":"/_next/static/chunks/eaf0689684af4460.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/3b453305048c1ce8.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+5:null
