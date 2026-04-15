@@ -9,6 +9,7 @@ import { images } from "@/lib/images";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { LocaleSwitcher } from "./LocaleSwitcher";
+import AuthButton from "./AuthButton";
 
 export function Header() {
   const t = useTranslations("nav");
@@ -71,6 +72,7 @@ export function Header() {
 
           {/* Right Side */}
           <div className="flex items-center gap-1.5">
+            <AuthButton />
             <LocaleSwitcher />
             <Link
               href="/contact"
@@ -118,6 +120,9 @@ export function Header() {
             >
               {t("consultation")}
             </Link>
+            <div className="px-4 mt-2">
+              <AuthButton />
+            </div>
           </div>
         </div>
       )}
