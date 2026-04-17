@@ -1,6 +1,0 @@
-1:"$Sreact.fragment"
-2:I[71537,["/_next/static/chunks/142e38ff595b7709.js","/_next/static/chunks/c42bafe163403ad9.js","/_next/static/chunks/b0887058ad527bd1.js","/_next/static/chunks/eb268a4583e21151.js","/_next/static/chunks/cadd7152a099d808.js"],"LearningDetail"]
-3:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
-4:"$Sreact.suspense"
-0:{"buildId":"r3kb1A_2But5LjtoLYSz0","rsc":["$","$1","c",{"children":[["$","$L2",null,{"content":{"id":"learn-4","slug":"ai-meets-robots","title":{"ko":"AI와 로봇의 만남","en":"When AI Meets Robots"},"description":{"ko":"인공지능 기술이 로봇에 어떻게 적용되는지를 다루는 고급 영상 강좌입니다. 머신러닝, 딥러닝, 강화학습이 로봇의 자율성을 어떻게 향상시키는지 알아봅니다.","en":"An advanced video course on how AI technology is applied to robots. Explore how machine learning, deep learning, and reinforcement learning enhance robot autonomy."},"category":"video","thumbnail":"/images/learning-video.svg","duration":"75분","level":"advanced","tags":["AI","머신러닝","딥러닝","자율 로봇"]}}],[["$","script","script-0",{"src":"/_next/static/chunks/eb268a4583e21151.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/cadd7152a099d808.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
-5:null
