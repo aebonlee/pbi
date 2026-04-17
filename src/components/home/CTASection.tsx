@@ -1,7 +1,5 @@
-"use client";
-
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { useTranslations } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/Button";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { ArrowRight } from "lucide-react";
@@ -27,7 +25,7 @@ export function CTASection() {
               <p className="text-lg text-white/80 mb-8">
                 {t("description")}
               </p>
-              <Link href="/contact">
+              <Link to="/contact">
                 <Button size="lg" className="gap-2 bg-white text-primary hover:bg-gray-100 border-white shadow-lg shadow-black/15">
                   {t("button")}
                   <ArrowRight className="w-4 h-4" />

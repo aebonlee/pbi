@@ -1,7 +1,5 @@
-"use client";
-
-import { useTranslations, useLocale } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { useTranslations, useLocale } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 import { courses } from "@/data/courses";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
@@ -69,7 +67,7 @@ export function CourseShowcase() {
                         locale
                       )}
                     </span>
-                    <Link href={`/courses/${course.slug}`}>
+                    <Link to={`/courses/${course.slug}`}>
                       <Button size="sm" className="gap-1">
                         {tc("learnMore")}
                         <ArrowRight className="w-3 h-3" />
@@ -84,7 +82,7 @@ export function CourseShowcase() {
 
         <ScrollReveal>
           <div className="text-center mt-12">
-            <Link href="/courses">
+            <Link to="/courses">
               <Button variant="outline" size="lg" className="gap-2">
                 {tc("viewAll")}
                 <ArrowRight className="w-4 h-4" />

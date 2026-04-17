@@ -1,7 +1,5 @@
-"use client";
-
-import { useTranslations, useLocale } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { useTranslations, useLocale } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 import { Card, CardContent } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { ArrowRight, Clock, BarChart, Play, FileText, Monitor } from "lucide-react";
@@ -61,7 +59,7 @@ export function LearningCard({ content }: { content: LearningContent }) {
           ))}
         </div>
 
-        <Link href={`/learning/${content.slug}`} className="mt-auto">
+        <Link to={`/learning/${content.slug}`} className="mt-auto">
           <Button variant="outline" size="sm" className="w-full gap-1">
             {t("learnMore")}
             <ArrowRight className="w-3 h-3" />

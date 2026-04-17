@@ -1,18 +1,13 @@
-"use client";
-
 import { useAuth } from '@/contexts/AuthContext';
-import { useParams } from 'next/navigation';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AuthButton() {
   const { isAuthenticated, logout, user } = useAuth();
-  const params = useParams();
-  const locale = params.locale || 'ko';
 
   if (!isAuthenticated) {
     return (
       <Link
-        href={`/${locale}/login`}
+        to="/login"
         className="text-sm font-medium px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors"
       >
         로그인

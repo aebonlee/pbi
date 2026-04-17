@@ -1,7 +1,5 @@
-"use client";
-
-import { useTranslations, useLocale } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { useTranslations, useLocale } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 import { Card, CardContent } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { ArrowRight, Clock, MapPin, Users, Tent, Wrench, Bus, Trophy } from "lucide-react";
@@ -59,7 +57,7 @@ export function ProgramCard({ program }: { program: Program }) {
           </div>
         </div>
 
-        <Link href={`/programs/${program.slug}`} className="mt-auto">
+        <Link to={`/programs/${program.slug}`} className="mt-auto">
           <Button variant="outline" size="sm" className="w-full gap-1">
             {tc("learnMore")}
             <ArrowRight className="w-3 h-3" />

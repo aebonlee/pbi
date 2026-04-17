@@ -1,7 +1,5 @@
-"use client";
-
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { useTranslations } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/Button";
 import { motion } from "framer-motion";
 import { ArrowRight, GraduationCap, Bot, Users, Sparkles } from "lucide-react";
@@ -59,13 +57,13 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Link href="/courses">
+            <Link to="/courses">
               <Button size="lg" className="gap-2 bg-white text-primary hover:bg-gray-100 border-white shadow-lg shadow-black/15">
                 {t("cta")}
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
-            <Link href="/contact">
+            <Link to="/contact">
               <Button variant="outline" size="lg" className="gap-2 text-white border-white/50 hover:bg-white/15 hover:border-white/80">
                 {t("ctaSecondary")}
               </Button>

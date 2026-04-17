@@ -1,6 +1,4 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { useTranslations } from '@/contexts/LanguageContext';
 import { SectionTitle } from "@/components/shared/SectionTitle";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { GraduationCap, Wrench, Users, Briefcase } from "lucide-react";

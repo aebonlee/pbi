@@ -1,5 +1,3 @@
-"use client";
-
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { CourseCard } from "./CourseCard";
 import type { Course } from "@/types/education";

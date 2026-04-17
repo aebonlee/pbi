@@ -1,7 +1,5 @@
-"use client";
-
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { useTranslations } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 import { EDUCATION_CENTER_INFO } from "@/lib/constants";
 import { Mail, Phone, MapPin } from "lucide-react";
 
@@ -14,7 +12,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Center Info */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-5">
+            <Link to="/" className="inline-block mb-5">
               <span className="text-2xl font-black tracking-tight text-white">
                 PBI<span className="text-sky-400">Edu</span>
               </span>
@@ -51,17 +49,17 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/courses" className="text-sm text-gray-400 hover:text-white transition-colors">
+                <Link to="/courses" className="text-sm text-gray-400 hover:text-white transition-colors">
                   {t("nav.courses")}
                 </Link>
               </li>
               <li>
-                <Link href="/learning" className="text-sm text-gray-400 hover:text-white transition-colors">
+                <Link to="/learning" className="text-sm text-gray-400 hover:text-white transition-colors">
                   {t("nav.learning")}
                 </Link>
               </li>
               <li>
-                <Link href="/instructors" className="text-sm text-gray-400 hover:text-white transition-colors">
+                <Link to="/instructors" className="text-sm text-gray-400 hover:text-white transition-colors">
                   {t("nav.instructors")}
                 </Link>
               </li>
@@ -75,12 +73,12 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/programs" className="text-sm text-gray-400 hover:text-white transition-colors">
+                <Link to="/programs" className="text-sm text-gray-400 hover:text-white transition-colors">
                   {t("nav.programs")}
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-sm text-gray-400 hover:text-white transition-colors">
+                <Link to="/about" className="text-sm text-gray-400 hover:text-white transition-colors">
                   {t("nav.about")}
                 </Link>
               </li>
@@ -94,12 +92,12 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/faq" className="text-sm text-gray-400 hover:text-white transition-colors">
+                <Link to="/faq" className="text-sm text-gray-400 hover:text-white transition-colors">
                   {t("nav.faq")}
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-sm text-gray-400 hover:text-white transition-colors">
+                <Link to="/contact" className="text-sm text-gray-400 hover:text-white transition-colors">
                   {t("nav.contact")}
                 </Link>
               </li>
@@ -113,10 +111,10 @@ export function Footer() {
             {t("common.copyright")}
           </p>
           <div className="flex items-center gap-6">
-            <Link href="/contact" className="text-xs text-gray-500 hover:text-gray-300 transition-colors">
+            <Link to="/contact" className="text-xs text-gray-500 hover:text-gray-300 transition-colors">
               {t("footer.privacy")}
             </Link>
-            <Link href="/contact" className="text-xs text-gray-500 hover:text-gray-300 transition-colors">
+            <Link to="/contact" className="text-xs text-gray-500 hover:text-gray-300 transition-colors">
               {t("footer.terms")}
             </Link>
           </div>

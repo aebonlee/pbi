@@ -1,6 +1,4 @@
-"use client";
-
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations, useLocale } from '@/contexts/LanguageContext';
 import { Card, CardContent } from "@/components/ui/Card";
 import { User } from "lucide-react";
 import type { Instructor } from "@/types/education";

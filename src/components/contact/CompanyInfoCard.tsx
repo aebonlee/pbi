@@ -1,6 +1,4 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { useTranslations } from '@/contexts/LanguageContext';
 import { EDUCATION_CENTER_INFO } from "@/lib/constants";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 

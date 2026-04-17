@@ -1,7 +1,5 @@
-"use client";
-
-import { useTranslations, useLocale } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { useTranslations, useLocale } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 import { Card, CardContent } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { formatPrice } from "@/lib/utils";
@@ -55,7 +53,7 @@ export function CourseCard({ course }: { course: Course }) {
           <span className="text-lg font-bold text-accent">
             {formatPrice(locale === "ko" ? course.price.krw : course.price.usd, locale)}
           </span>
-          <Link href={`/courses/${course.slug}`}>
+          <Link to={`/courses/${course.slug}`}>
             <Button size="sm" className="gap-1">
               {t("learnMore")}
               <ArrowRight className="w-3 h-3" />

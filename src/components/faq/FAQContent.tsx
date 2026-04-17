@@ -1,7 +1,5 @@
-"use client";
-
 import { useState } from "react";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations, useLocale } from '@/contexts/LanguageContext';
 import { PageHeader } from "@/components/shared/PageHeader";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Accordion } from "@/components/ui/Accordion";

@@ -1,7 +1,5 @@
-"use client";
-
-import { useTranslations, useLocale } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { useTranslations, useLocale } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/Button";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { formatPrice } from "@/lib/utils";
@@ -129,13 +127,13 @@ export function CourseDetail({ course }: { course: Course }) {
                 </div>
 
                 <div className="space-y-3 pt-4">
-                  <Link href="/contact" className="block">
+                  <Link to="/contact" className="block">
                     <Button size="lg" className="w-full gap-2">
                       {t("enrollNow")}
                       <ArrowRight className="w-4 h-4" />
                     </Button>
                   </Link>
-                  <Link href="/contact" className="block">
+                  <Link to="/contact" className="block">
                     <Button variant="outline" size="lg" className="w-full">
                       {t("inquiry")}
                     </Button>

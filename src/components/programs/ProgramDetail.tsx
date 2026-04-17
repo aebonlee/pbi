@@ -1,7 +1,5 @@
-"use client";
-
-import { useTranslations, useLocale } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { useTranslations, useLocale } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/Button";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { ArrowRight, ArrowLeft, Clock, MapPin, Users, CheckCircle } from "lucide-react";
@@ -17,7 +15,7 @@ export function ProgramDetail({ program }: { program: Program }) {
       <div className="container-custom">
         <ScrollReveal>
           <div className="max-w-4xl mx-auto">
-            <Link href="/programs" className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-primary transition-colors mb-8">
+            <Link to="/programs" className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-primary transition-colors mb-8">
               <ArrowLeft className="w-4 h-4" />
               {locale === "ko" ? "체험 프로그램으로 돌아가기" : "Back to Programs"}
             </Link>
@@ -83,7 +81,7 @@ export function ProgramDetail({ program }: { program: Program }) {
                 {locale === "ko" ? "문의 주시면 상세 일정과 참가 방법을 안내해드립니다." : "Contact us for detailed schedule and registration information."}
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link href="/contact">
+                <Link to="/contact">
                   <Button size="lg" className="gap-2">
                     {t("apply")}
                     <ArrowRight className="w-4 h-4" />

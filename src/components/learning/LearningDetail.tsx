@@ -1,7 +1,5 @@
-"use client";
-
-import { useTranslations, useLocale } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { useTranslations, useLocale } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/Button";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Clock, BarChart, Tag, Play, FileText, Monitor, ArrowLeft } from "lucide-react";
@@ -30,7 +28,7 @@ export function LearningDetail({ content }: { content: LearningContent }) {
       <div className="container-custom">
         <ScrollReveal>
           <div className="max-w-4xl mx-auto">
-            <Link href="/learning" className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-primary transition-colors mb-8">
+            <Link to="/learning" className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-primary transition-colors mb-8">
               <ArrowLeft className="w-4 h-4" />
               {locale === "ko" ? "온라인 학습으로 돌아가기" : "Back to Online Learning"}
             </Link>
@@ -82,7 +80,7 @@ export function LearningDetail({ content }: { content: LearningContent }) {
               <p className="text-lg text-text-secondary mb-4">
                 {t("comingSoon")}
               </p>
-              <Link href="/contact">
+              <Link to="/contact">
                 <Button size="lg" className="gap-2">
                   {tc("contactUs")}
                 </Button>
