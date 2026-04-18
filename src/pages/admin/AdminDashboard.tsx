@@ -83,7 +83,7 @@ function Dashboard() {
     weekAgo.setDate(weekAgo.getDate() - 7);
 
     const [totalRes, todayRes, weeklyRes] = await Promise.all([
-      supabase.from('user_profiles').select('id', { count: 'exact', head: true }),
+      supabase.from('user_profiles').select('id', { count: 'exact', head: true }).contains('visited_sites', [window.location.hostname]),
       supabase
         .from('user_profiles')
         .select('id', { count: 'exact', head: true })
